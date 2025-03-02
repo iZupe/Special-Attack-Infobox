@@ -33,6 +33,11 @@ public class SpecInfoPlugin extends Plugin
 		infoBoxManager.addInfoBox(new SpecInfoBox(ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/special_attack_sprite.png"))), this, client, config));
 	}
 
+	@Override
+	protected void shutDown() throws Exception
+	{
+		infoBoxManager.removeIf(t -> t instanceof SpecInfoBox);
+	}
 
 	@Provides
 	SpecInfoConfig provideConfig(ConfigManager configManager)
