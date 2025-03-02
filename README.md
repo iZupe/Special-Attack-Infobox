@@ -1,2 +1,2 @@
-# Example
-An example greeter plugin
+# Special Attack Infobox
+Show an infobox for special attack
